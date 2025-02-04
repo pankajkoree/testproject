@@ -1,12 +1,12 @@
-import { NextResponse } from "next/server";
-import { connect } from "@/dbConfig/dbConfig"
-import User from "@/models/userModel"
+import { NextResponse, NextRequest } from "next/server";
+import { connect } from "@/dbConfig/dbConfig";
+import User from "@/models/userModel";
 import bcryptjs from "bcryptjs";
 import jwt from "jsonwebtoken";
 
 connect();
 
-export const POST = async (request) => {
+export const POST = async (request: NextRequest) => {
   try {
     const reqBody = await request.json();
     const { email, password } = reqBody;
