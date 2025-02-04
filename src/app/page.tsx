@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <div>
-      <h1>fixing layout</h1>
+    <div className="relative flex justify-center items-center text-4xl">
+      <h1>Landing page</h1>
     </div>
   );
 }
