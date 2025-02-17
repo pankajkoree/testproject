@@ -5,7 +5,7 @@ const geminiModel = googleAI.getGenerativeModel({
 });
 
 var question = "what is the value of pie in maths ?";
-const generate = async (question) => {
+const generate = async (request) => {
   try {
     const prompt = question;
     const result = await geminiModel.generateContent(prompt);
